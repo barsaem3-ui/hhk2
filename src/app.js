@@ -3,6 +3,13 @@ import { initAuth, SUPABASE_URL, SUPABASE_KEY } from './auth';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+// PWA Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+    });
+}
+
 let COLUMNS = [
     { id: 'item_no', label: '번호', width: '50px' },
     { id: 'product_name', label: '제작명', width: '200px' },

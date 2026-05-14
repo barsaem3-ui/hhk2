@@ -10,9 +10,9 @@
     "sync": "node src/sync-excel.cjs"
   },
   "devDependencies": {
-    "vite": "^6.2.0"
   },
   "dependencies": {
+    "vite": "^6.2.0",
     "@supabase/supabase-js": "^2.43.1",
     "chokidar": "^5.0.0",
     "pdfjs-dist": "^4.2.67",

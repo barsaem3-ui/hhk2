@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANKOOK Manufacturing OS</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <div class="toolbar">
+                <div class="brand">HANKOOK Manufacturing System</div>
+                
+                <div class="search-container">
+                    <input type="text" id="global-search-input" placeholder="통합 데이터 검색..." class="search-input">
+                </div>
+
+                <div class="dropdown-group">
+                    <select id="top-product-dropdown" class="nav-select"></select>
+                    <select id="top-instruction-dropdown" class="nav-select"></select>
+                </div>
+            </div>
+            
+            <div id="sync-status-container" class="sync-status">
+                <span class="status-dot"></span>
+                <span id="sync-status-text">연결 대기 중...</span>
+            </div>
+        </header>
+
+        <main class="grid-wrapper">
+            <div id="instruction-grid" class="modern-grid">
+                <div id="grid-header" class="grid-row header"></div>
+                <div id="grid-body" class="grid-body"></div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>

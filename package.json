@@ -1,0 +1,21 @@
+{
+  "name": "workorder-system",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync": "node src/sync-excel.cjs"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.1",
+    "chokidar": "^5.0.0",
+    "pdfjs-dist": "^4.2.67",
+    "xlsx": "^0.18.5"
+  }
+}
